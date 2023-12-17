@@ -20,8 +20,8 @@ namespace HotelAdactin_BDD
         [When(@"I am typing valid username and password")]
         public void WhenIAmTypingValidUsernameAndPassword(Table table)
         {
-            driver.FindElement(By.Id("username")).SendKeys("AmirImam");
-            driver.FindElement(By.Id("password")).SendKeys("AmirImam");
+            driver.FindElement(By.Id("username")).SendKeys("Mujahid");
+            driver.FindElement(By.Id("password")).SendKeys("Akber Ali");
             driver.FindElement(By.Id("login")).Click();
 
         }
