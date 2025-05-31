@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace HotelAdactin_BDD
+namespace TestifyStack_BDD
 {
     using TechTalk.SpecFlow;
     using System;
@@ -20,8 +20,8 @@ namespace HotelAdactin_BDD
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "4.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Testing loigin Page of Hotel Adactin")]
-    public partial class TestingLoiginPageOfHotelAdactinFeature
+    [NUnit.Framework.DescriptionAttribute("Login Functionality on TestifyStack Practice Site")]
+    public partial class LoginFunctionalityOnTestifyStackPracticeSiteFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -35,7 +35,7 @@ namespace HotelAdactin_BDD
         public virtual async System.Threading.Tasks.Task FeatureSetupAsync()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunnerForAssembly(null, NUnit.Framework.TestContext.CurrentContext.WorkerId);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "Testing loigin Page of Hotel Adactin", "A short summary of the feature", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "Login Functionality on TestifyStack Practice Site", null, ProgrammingLanguage.CSharp, featureTags);
             await testRunner.OnFeatureStartAsync(featureInfo);
         }
         
@@ -73,17 +73,26 @@ namespace HotelAdactin_BDD
             await testRunner.CollectScenarioErrorsAsync();
         }
         
+        public virtual async System.Threading.Tasks.Task FeatureBackgroundAsync()
+        {
+#line 3
+  #line hidden
+#line 4
+    await testRunner.GivenAsync("I am on the TestifyStack login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Adding valid user name and password to  test login")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
-        public async System.Threading.Tasks.Task AddingValidUserNameAndPasswordToTestLogin()
+        [NUnit.Framework.DescriptionAttribute("Login with valid username and password")]
+        [NUnit.Framework.CategoryAttribute("Smoke_Test_Login")]
+        public async System.Threading.Tasks.Task LoginWithValidUsernameAndPassword()
         {
             string[] tagsOfScenario = new string[] {
-                    "SmokeTest"};
+                    "Smoke_Test_Login"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Adding valid user name and password to  test login", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login with valid username and password", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 7
+  this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -92,22 +101,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 7
- await testRunner.GivenAsync("I am on Url of HotelAdaction working and on login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 3
+  await this.FeatureBackgroundAsync();
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "username",
-                            "",
-                            "Password"});
+                            "password"});
                 table1.AddRow(new string[] {
-                            "AmirImam",
-                            "",
-                            "AmirImam"});
+                            "practice",
+                            "SuperSecretPassword!"});
 #line 8
- await testRunner.WhenAsync("I am typing valid username and password", ((string)(null)), table1, "When ");
+    await testRunner.WhenAsync("I enter the following credentials:", ((string)(null)), table1, "When ");
 #line hidden
 #line 11
- await testRunner.ThenAsync("Website will go to search page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    await testRunner.AndAsync("I click the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 12
+    await testRunner.ThenAsync("I should be redirected to the secure area", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 13
+    await testRunner.AndAsync("I should see a welcome message confirming successful login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
