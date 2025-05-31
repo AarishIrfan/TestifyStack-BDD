@@ -2,11 +2,11 @@
 
 A comprehensive automated testing framework built with **SpecFlow**, **Selenium WebDriver** and **C#** for testing login functionality on the TestifyStack practice website.
 
-## 🚀 Project Overview
+## Project Overview
 
 This project demonstrates **Behavior-Driven Development (BDD)** approach using Gherkin syntax to create readable and maintainable automated tests. The framework focuses on testing user authentication workflows with real-world scenarios.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **C#** - Primary programming language
 - **SpecFlow** - BDD framework for .NET
@@ -15,7 +15,7 @@ This project demonstrates **Behavior-Driven Development (BDD)** approach using G
 - **Microsoft Edge WebDriver** - Browser automation
 - **Visual Studio** - IDE
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before running this project, ensure you have:
 
@@ -24,7 +24,7 @@ Before running this project, ensure you have:
 - [Microsoft Edge Browser](https://www.microsoft.com/edge)
 - [Git](https://git-scm.com/)
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository:**
    ```bash
@@ -42,7 +42,7 @@ Before running this project, ensure you have:
    dotnet build
    ```
 
-## 🏃‍♂️ Running Tests
+## Running Tests
 
 ### Via Visual Studio
 1. Open the solution in Visual Studio
